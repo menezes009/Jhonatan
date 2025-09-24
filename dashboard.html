@@ -10,8 +10,24 @@
   <main class="container">
     <h1>Painel (neste aparelho)</h1>
 
+    <section class="kpi">
+      <div class="item">
+        <div class="value" id="kpiTotal">0</div>
+        <div class="label">Total de códigos (data.json)</div>
+      </div>
+      <div class="item">
+        <div class="value" id="kpiUsed">0</div>
+        <div class="label">Check-ins (neste aparelho)</div>
+      </div>
+      <div class="item">
+        <div class="value" id="kpiLeft">0</div>
+        <div class="label">Restantes</div>
+      </div>
+    </section>
+
     <section class="card">
       <div class="toolbar">
+        <button id="btnRefresh">Atualizar</button>
         <input id="filter" type="text" placeholder="Filtrar por nome ou código" />
         <button id="btnExport">Exportar CSV</button>
         <button id="btnExportJson">Backup (.json)</button>
@@ -30,10 +46,6 @@
         </thead>
         <tbody id="tbody"></tbody>
       </table>
-      <small class="muted">Mostra dados do <em>localStorage</em> deste aparelho.</small>
+      <small class="muted">Este painel mostra <strong>apenas</strong> os check-ins do <em>localStorage</em> deste aparelho/navegador.</small>
     </section>
-  </main>
-
-  <script type="module" src="dashboard.js"></script>
-</body>
-</html>
+  </
